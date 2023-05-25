@@ -4,7 +4,6 @@ library(ggplot2)
 ### Load outputs of wavelet power transformation ###
 ####################################################
 # To produce them run CalculateWavelets.R (time consuming!)
-# Alternatively, you might download the wavelet spectra from https://github.com/jantumajer/MoonWood/tree/main/Waveletes
 
 ###
 A_TWD <- readRDS("A_TWD_60min.Rda")
