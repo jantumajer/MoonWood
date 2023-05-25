@@ -5,12 +5,12 @@ library(ggplot2)
 ### Loading GRO and TWD data ###
 ################################
 
-ALL <- rbind(read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Acer.csv"),
-             read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Fagus.csv"),
-             read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Carpinus.csv"),
-             read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Quercus.csv"),
-             read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Pinus.csv"),
-             read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Picea.csv"))
+ALL <- rbind(read.csv("Acer.csv"),
+             read.csv("Fagus.csv"),
+             read.csv("Carpinus.csv"),
+             read.csv("Quercus.csv"),
+             read.csv("Pinus.csv"),
+             read.csv("Picea.csv"))
       
 ####################
 ###  Moon phases ###
@@ -97,4 +97,4 @@ chart <- ggplot() +
 
   chart
 
-ggsave("e:/MoonWood/Obrazky/ALL_withoutSeasons.jpeg", width = 23, heigh = 13, units = "cm", dpi = 1000)
+ggsave("ALL_withoutSeasons.jpeg", width = 23, heigh = 13, units = "cm", dpi = 1000)
