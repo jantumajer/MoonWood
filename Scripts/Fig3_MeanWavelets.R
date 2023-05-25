@@ -6,7 +6,6 @@ library(ggh4x)
 ### Load outputs of wavelet power transformation ###
 ####################################################
 # To produce them run CalculateWavelets.R (time consuming!)
-# Alternatively, you might download the wavelet spectra from https://github.com/jantumajer/MoonWood/tree/main/Waveletes
 
 A_GRO <- readRDS("A_GRO_60min.Rda")
 B_GRO <- readRDS("B_GRO_60min.Rda")
