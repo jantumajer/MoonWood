@@ -8,34 +8,34 @@ library(ggh4x)
 # To produce them run CalculateWavelets.R (time consuming!)
 # Alternatively, you might download the wavelet spectra from https://github.com/jantumajer/MoonWood/tree/main/Waveletes
 
-A_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/A_GRO_60min.Rda")
-B_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/B_GRO_60min.Rda")
-C_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/C_GRO_60min.Rda")
-O_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/O_GRO_60min.Rda")
-PISY_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PISY_GRO_60min.Rda")
-PCAB_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PCAB_GRO_60min.Rda")
+A_GRO <- readRDS("A_GRO_60min.Rda")
+B_GRO <- readRDS("B_GRO_60min.Rda")
+C_GRO <- readRDS("C_GRO_60min.Rda")
+O_GRO <- readRDS("O_GRO_60min.Rda")
+PISY_GRO <- readRDS("PISY_GRO_60min.Rda")
+PCAB_GRO <- readRDS("PCAB_GRO_60min.Rda")
 ###
-A_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/A_TWD_60min.Rda")
-B_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/B_TWD_60min.Rda")
-C_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/C_TWD_60min.Rda")
-O_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/O_TWD_60min.Rda")
-PISY_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PISY_TWD_60min.Rda")
-PCAB_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PCAB_TWD_60min.Rda")
+A_TWD <- readRDS("A_TWD_60min.Rda")
+B_TWD <- readRDS("B_TWD_60min.Rda")
+C_TWD <- readRDS("C_TWD_60min.Rda")
+O_TWD <- readRDS("O_TWD_60min.Rda")
+PISY_TWD <- readRDS("PISY_TWD_60min.Rda")
+PCAB_TWD <- readRDS("PCAB_TWD_60min.Rda")
 ###
-A_t <- readRDS("E:/MoonWood/Data/Waves/clim/A_t.Rda")
-B_t <- readRDS("E:/MoonWood/Data/Waves/clim/B_t.Rda")
-C_t <- readRDS("E:/MoonWood/Data/Waves/clim/C_t.Rda")
-O_t <- readRDS("E:/MoonWood/Data/Waves/clim/O_t.Rda")
-PISY_t <- readRDS("E:/MoonWood/Data/Waves/clim/PISY_t.Rda")
-PCAB_t <- readRDS("E:/MoonWood/Data/Waves/clim/PCAB_t.Rda")
+A_t <- readRDS("A_t.Rda")
+B_t <- readRDS("B_t.Rda")
+C_t <- readRDS("C_t.Rda")
+O_t <- readRDS("O_t.Rda")
+PISY_t <- readRDS("PISY_t.Rda")
+PCAB_t <- readRDS("PCAB_t.Rda")
 ###
-A_vpd <- readRDS("E:/MoonWood/Data/Waves/clim/A_vpd.Rda")
-B_vpd <- readRDS("E:/MoonWood/Data/Waves/clim/B_vpd.Rda")
-O_vpd <- readRDS("E:/MoonWood/Data/Waves/clim/O_vpd.Rda")
-PISY_vpd <- readRDS("E:/MoonWood/Data/Waves/clim/PISY_vpd.Rda")
-PCAB_vpd <- readRDS("E:/MoonWood/Data/Waves/clim/PCAB_vpd.Rda")
+A_vpd <- readRDS("A_vpd.Rda")
+B_vpd <- readRDS("B_vpd.Rda")
+O_vpd <- readRDS("O_vpd.Rda")
+PISY_vpd <- readRDS("PISY_vpd.Rda")
+PCAB_vpd <- readRDS("PCAB_vpd.Rda")
 ###
-moon <- readRDS("E:/MoonWood/Data/Waves/clim/moon.Rda")
+moon <- readRDS("moon.Rda")
 
 ################
 ### Grouping ###
@@ -111,5 +111,5 @@ lines_ALL2 <- ggplot(data = dat2) +
 
 lines_ALL2
 
-ggsave("e:/MoonWood/Obrazky/waves_hist_ALL_clim.jpeg", width = 15, heigh = 21, units = "cm", dpi = 1200)
+ggsave("waves_hist_ALL_clim.jpeg", width = 15, heigh = 21, units = "cm", dpi = 1200)
 
