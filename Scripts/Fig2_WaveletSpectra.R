@@ -7,19 +7,19 @@ library(reshape2)
 # To produce them run CalculateWavelets.R (time consuming!)
 # Alternatively, you might download the wavelet spectra from https://github.com/jantumajer/MoonWood/tree/main/Waveletes
 
-A_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/A_GRO_60min.Rda")
-B_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/B_GRO_60min.Rda")
-C_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/C_GRO_60min.Rda")
-O_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/O_GRO_60min.Rda")
-PISY_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PISY_GRO_60min.Rda")
-PCAB_GRO <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PCAB_GRO_60min.Rda")
+A_GRO <- readRDS("A_GRO_60min.Rda")
+B_GRO <- readRDS("B_GRO_60min.Rda")
+C_GRO <- readRDS("C_GRO_60min.Rda")
+O_GRO <- readRDS("O_GRO_60min.Rda")
+PISY_GRO <- readRDS("PISY_GRO_60min.Rda")
+PCAB_GRO <- readRDS("PCAB_GRO_60min.Rda")
 ###
-A_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/A_TWD_60min.Rda")
-B_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/B_TWD_60min.Rda")
-C_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/C_TWD_60min.Rda")
-O_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/O_TWD_60min.Rda")
-PISY_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PISY_TWD_60min.Rda")
-PCAB_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PCAB_TWD_60min.Rda")
+A_TWD <- readRDS("A_TWD_60min.Rda")
+B_TWD <- readRDS("B_TWD_60min.Rda")
+C_TWD <- readRDS("C_TWD_60min.Rda")
+O_TWD <- readRDS("O_TWD_60min.Rda")
+PISY_TWD <- readRDS("PISY_TWD_60min.Rda")
+PCAB_TWD <- readRDS("PCAB_TWD_60min.Rda")
 
 ################################################
 ### Cone of influence converted into polygon ###
@@ -102,5 +102,5 @@ mat <- ggplot() +
 
 # mat
 
-ggsave(plot = mat, filename = "e:/MoonWood/Obrazky/waves_BOTH.jpeg", width = 26, heigh = 28, units = "cm", dpi = 500)
+ggsave(plot = mat, filename = "waves_BOTH.jpeg", width = 26, heigh = 28, units = "cm", dpi = 500)
  
