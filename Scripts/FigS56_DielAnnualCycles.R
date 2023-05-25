@@ -6,12 +6,12 @@ library(lunar)
 ### Loading GRO and TWD data ###
 ################################
 
-ALL <- rbind(read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Acer.csv"),
-             read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Fagus.csv"),
-             read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Carpinus.csv"),
-             read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Quercus.csv"),
-             read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Pinus.csv"),
-             read.csv("E:/MoonWood/Manuscript/DataAvailability/Data/Picea.csv"))
+ALL <- rbind(read.csv("Acer.csv"),
+             read.csv("Fagus.csv"),
+             read.csv("Carpinus.csv"),
+             read.csv("Quercus.csv"),
+             read.csv("Pinus.csv"),
+             read.csv("Picea.csv"))
 
 ####################
 ###  Moon phases ###
@@ -72,7 +72,7 @@ chart <- ggplot(data = agg_DOY) +
 
   chart
 
-ggsave("e:/MoonWood/Obrazky/series_anual.jpeg", width = 30, heigh = 30, units = "cm", dpi = 700)
+ggsave("series_anual.jpeg", width = 30, heigh = 30, units = "cm", dpi = 700)
 
 
 
@@ -102,4 +102,4 @@ chart2 <- ggplot(data = agg_H[agg_H$SEASON == "Summer" & agg_H$VAR == "Growth ra
 
 chart2
 
-ggsave("e:/MoonWood/Obrazky/series_daily.jpeg", width = 40, heigh = 17, units = "cm", dpi = 700)
+ggsave("series_daily.jpeg", width = 40, heigh = 17, units = "cm", dpi = 700)
