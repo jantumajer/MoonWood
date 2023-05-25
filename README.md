@@ -10,7 +10,6 @@ Jan Tumajer<sup>12</sup>, Sabine Braun<sup>3</sup>, Andreas Burger<sup>1</sup>, 
 4.	Swiss Federal Institute for Forest, Snow and Landscape Research WSL, Zürcherstrasse 111, 8903 Birmensdorf, Switzerland
 
 
-### Contact and bug reporting
+### Contact
 Jan Tumajer
-
 tumajerj@natur.cuni.cz
