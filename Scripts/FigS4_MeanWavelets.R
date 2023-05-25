@@ -7,19 +7,19 @@ library(ggplot2)
 # Alternatively, you might download the wavelet spectra from https://github.com/jantumajer/MoonWood/tree/main/Waveletes
 
 ###
-A_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/A_TWD_60min.Rda")
-B_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/B_TWD_60min.Rda")
-C_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/C_TWD_60min.Rda")
-O_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/O_TWD_60min.Rda")
-PISY_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PISY_TWD_60min.Rda")
-PCAB_TWD <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PCAB_TWD_60min.Rda")
+A_TWD <- readRDS("A_TWD_60min.Rda")
+B_TWD <- readRDS("B_TWD_60min.Rda")
+C_TWD <- readRDS("C_TWD_60min.Rda")
+O_TWD <- readRDS("O_TWD_60min.Rda")
+PISY_TWD <- readRDS("PISY_TWD_60min.Rda")
+PCAB_TWD <- readRDS("PCAB_TWD_60min.Rda")
 ###
-A_TWD_t <- readRDS("E:/MoonWood/Data/Waves/waves_calc/A_TWD_60min_TEMP.Rda")
-B_TWD_t <- readRDS("E:/MoonWood/Data/Waves/waves_calc/B_TWD_60min_TEMP.Rda")
-C_TWD_t <- readRDS("E:/MoonWood/Data/Waves/waves_calc/C_TWD_60min_TEMP.Rda")
-O_TWD_t <- readRDS("E:/MoonWood/Data/Waves/waves_calc/O_TWD_60min_TEMP.Rda")
-PISY_TWD_t <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PISY_TWD_60min_TEMP.Rda")
-PCAB_TWD_t <- readRDS("E:/MoonWood/Data/Waves/waves_calc/PCAB_TWD_60min_TEMP.Rda")
+A_TWD_t <- readRDS("A_TWD_60min_TEMP.Rda")
+B_TWD_t <- readRDS("B_TWD_60min_TEMP.Rda")
+C_TWD_t <- readRDS("C_TWD_60min_TEMP.Rda")
+O_TWD_t <- readRDS("O_TWD_60min_TEMP.Rda")
+PISY_TWD_t <- readRDS("PISY_TWD_60min_TEMP.Rda")
+PCAB_TWD_t <- readRDS("PCAB_TWD_60min_TEMP.Rda")
 
 ################
 ### Grouping ###
@@ -78,4 +78,4 @@ lines_ALL <- ggplot(data = agg_all) +
 
 lines_ALL
 
-ggsave("e:/MoonWood/Obrazky/waves_hist_TEMP.jpeg", width = 12, heigh = 11, units = "cm", dpi = 1200)
+ggsave("waves_hist_TEMP.jpeg", width = 12, heigh = 11, units = "cm", dpi = 1200)
