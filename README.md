@@ -13,6 +13,4 @@ Jan Tumajer<sup>12</sup>, Sabine Braun<sup>3</sup>, Andreas Burger<sup>1</sup>, 
 ### Contact and bug reporting
 Jan Tumajer
 
-Charles University, Faculty of Science, Department of Physical Geography and Geoecology, Albertov 6, 12843 Prague, Czech Republic
-
 tumajerj@natur.cuni.cz
