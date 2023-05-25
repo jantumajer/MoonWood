@@ -3,7 +3,7 @@
 ### Title (provisional)
 Tree stem radius does not oscillate with the lunar cycle. Using growth monitoring to test the moon wood concept
 
-Jan Tumajer[12*], Sabine Braun3, Andreas Burger1, Tobias Scharnweber1, Marko Smiljanic1, Lorenz Walthert4, Roman Zweifel4, Martin Wilmking1
+Jan Tumajer<sup>12*</sup>, Sabine Braun3, Andreas Burger1, Tobias Scharnweber1, Marko Smiljanic1, Lorenz Walthert4, Roman Zweifel4, Martin Wilmking1
 1-	DendroGreif, Institute of Botany and Landscape Ecology, University of Greifswald, Soldmannstraße 15, 17489 Greifswald, Germany
 2-	Department of Physical Geography and Geoecology, Faculty of Science, Charles University, Albertov 6, 12843 Prague, Czech Republic
 3-	Institute for Applied Plant Biology AG, Benkenstrasse 254a, 4108 Witterswil, Switzerland
