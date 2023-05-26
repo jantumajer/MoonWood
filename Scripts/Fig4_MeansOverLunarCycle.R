@@ -81,8 +81,7 @@ agg_TEMP <- rbind(cbind(SPE = agg_TEMP_112_agg[,c(1)], MOONcat = 0.5, agg_TEMP_1
                  cbind(SPE = agg_TEMP_112_agg[,c(1)], MOONcat = 12.5, agg_TEMP_112_agg[,c(5:7)], VAR = agg_TEMP_112_agg[,2], CI = agg_TEMP_112_agg[,9]))
 
 chart <- ggplot() +
-  geom_vline(xintercept = c(9.5, 12.5), linetype = "dashed", col = "blue1", alpha = 0.8, linewidth = 0.4)+
-  geom_vline(xintercept = c(0.5:12.5), linetype = "solid", col = "grey20", alpha = 0.45, linewidth = 0.1)+
+  geom_vline(xintercept = c(9), linetype = "dashed", col = "blue1", alpha = 0.8, linewidth = 0.4)+
   
   geom_ribbon(aes(x=as.numeric(MOONcat), ymin=MEANm-CI, ymax=MEANm+CI, fill = SPE), group =1, alpha = 0.20, data = agg_ALL[agg_TEMP$VAR == "Growth rate [μm/h]",]) +
   geom_ribbon(aes(x=as.numeric(MOONcat), ymin=MEANm-CI, ymax=MEANm+CI, fill = SPE), group =1, alpha = 0.20, data = agg_TEMP[agg_TEMP$VAR == "Tree water deficit [μm]",]) +
@@ -91,7 +90,7 @@ chart <- ggplot() +
   geom_line(aes(y=MEANm, x=as.numeric(MOONcat), color = SPE), linetype = "dashed",  linewidth = 0.25, group =1, alpha = 1,  data = agg_ALL[agg_ALL$VAR == "Tree water deficit [μm]",]) +
   geom_line(aes(y=MEANm, x=as.numeric(MOONcat), color = SPE), linetype = "solid",  linewidth = 0.50, group =1, alpha = 1,  data = agg_TEMP[agg_TEMP$VAR == "Tree water deficit [μm]",]) +
 
-  scale_x_continuous(name = xlab(""), limits = c(0.5,12.5), breaks = c(0.5, 3.5, 6.5, 9.5), labels = c("NM", "1Q", "FM", "3Q"))+
+  scale_x_continuous(name = xlab(""), breaks = c(0, 3, 6, 9), labels = c("NM", "1Q", "FM", "3Q", "NM))+
 
   facet_grid(VAR ~ factor(SPE, levels = c("A", "B", "C", "O", "PCAB", "PISY"), labels = c("Acer", "Fagus", "Carpinus", "Quercus", "Picea", "Pinus")), scales = "free_y") +
   theme_classic() + 
