@@ -1,3 +1,5 @@
+### WARNING: Time consuming piece of code. We recommend to run it on strong CPU and, preferentially, over the weekend.
+
 library(WaveletComp)
 
 ################################
