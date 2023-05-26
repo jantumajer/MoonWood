@@ -92,19 +92,8 @@ chart <- ggplot() +
   geom_line(aes(y=MEANm, x=as.numeric(MOONcat), color = SPE), linetype = "solid",  linewidth = 0.50, group =1, alpha = 1,  data = agg_TEMP[agg_TEMP$VAR == "Tree water deficit [μm]",]) +
 
   scale_x_continuous(name = xlab(""), limits = c(0.5,12.5), breaks = c(0.5, 3.5, 6.5, 9.5), labels = c("NM", "1Q", "FM", "3Q"))+
-  
-  # NOTE:ggplot does not permit combination of scales="free" in facet_nested and coord_polar
-  # Therefore, charts for GRO and TWD need to be plot sperately and stitched later
 
-  # For polar diagrams of TWD
-  scale_y_continuous(name = ylab(""), limits = c(0,70), breaks = c(0, 30, 60)) +
-  geom_hline(yintercept = c(30,60), linetype = "solid", col = "grey20", alpha = 0.45, linewidth = 0.1)+
-  
-  # For polar diagrams of GRO
-  # scale_y_continuous(name = ylab(""), limits = c(0,.25), breaks = c(0, .1, .2)) +
-  # geom_hline(yintercept = c(.1,.2), linetype = "solid", col = "grey20", alpha = 0.45, linewidth = 0.1)+
-  
-  facet_nested_wrap(VAR ~ factor(SPE, levels = c("A", "B", "C", "O", "PCAB", "PISY"), labels = c("Acer", "Fagus", "Carpinus", "Quercus", "Picea", "Pinus")), ncol = 3) +
+  facet_grid(VAR ~ factor(SPE, levels = c("A", "B", "C", "O", "PCAB", "PISY"), labels = c("Acer", "Fagus", "Carpinus", "Quercus", "Picea", "Pinus")), scales = "free_y") +
   theme_classic() + 
   coord_polar() + 
   theme(plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm"),
