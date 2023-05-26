@@ -90,7 +90,7 @@ chart <- ggplot() +
   geom_line(aes(y=MEANm, x=as.numeric(MOONcat), color = SPE), linetype = "dashed",  linewidth = 0.25, group =1, alpha = 1,  data = agg_ALL[agg_ALL$VAR == "Tree water deficit [μm]",]) +
   geom_line(aes(y=MEANm, x=as.numeric(MOONcat), color = SPE), linetype = "solid",  linewidth = 0.50, group =1, alpha = 1,  data = agg_TEMP[agg_TEMP$VAR == "Tree water deficit [μm]",]) +
 
-  scale_x_continuous(name = xlab(""), breaks = c(0, 3, 6, 9), labels = c("NM", "1Q", "FM", "3Q", "NM))+
+  scale_x_continuous(name = xlab(""), breaks = c(0, 3, 6, 9, 12), labels = c("NM", "1Q", "FM", "3Q", "NM))+
 
   facet_grid(VAR ~ factor(SPE, levels = c("A", "B", "C", "O", "PCAB", "PISY"), labels = c("Acer", "Fagus", "Carpinus", "Quercus", "Picea", "Pinus")), scales = "free_y") +
   theme_classic() + 
