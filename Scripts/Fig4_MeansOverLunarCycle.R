@@ -64,22 +64,6 @@ agg_TEMP[agg_TEMP$SPE %in% c("PCAB", "PISY") & agg_TEMP$VAR == "Tree water defic
 agg_ALL$CI <- qt(0.975, agg_ALL$N)*agg_ALL$SDm/sqrt(agg_ALL$N)
 agg_TEMP$CI <- qt(0.975, agg_TEMP$N)*agg_TEMP$SDm/sqrt(agg_TEMP$N)
 
-
-agg_ALL$MOONcat <- as.numeric(agg_ALL$MOONcat)
-
-agg_ALL_112 <- agg_ALL[agg_ALL$MOONcat %in% c(1, 12),]
-agg_ALL_112_agg <- aggregate(agg_ALL_112, by = list(SPE = agg_ALL_112$SPE, VAR = agg_ALL_112$VAR), FUN = mean)
-agg_ALL <- rbind(cbind(SPE = agg_ALL_112_agg[,c(1)], MOONcat = 0.5, agg_ALL_112_agg[,c(5:7)], VAR = agg_ALL_112_agg[,2], CI = agg_ALL_112_agg[,9]),
-                 agg_ALL,
-                 cbind(SPE = agg_ALL_112_agg[,c(1)], MOONcat = 12.5, agg_ALL_112_agg[,c(5:7)], VAR = agg_ALL_112_agg[,2], CI = agg_ALL_112_agg[,9]))
-
-
-agg_TEMP_112 <- agg_TEMP[agg_TEMP$MOONcat %in% c(1, 12),]
-agg_TEMP_112_agg <- aggregate(agg_TEMP_112, by = list(SPE = agg_TEMP_112$SPE, VAR = agg_TEMP_112$VAR), FUN = mean)
-agg_TEMP <- rbind(cbind(SPE = agg_TEMP_112_agg[,c(1)], MOONcat = 0.5, agg_TEMP_112_agg[,c(5:7)], VAR = agg_TEMP_112_agg[,2], CI = agg_TEMP_112_agg[,9]),
-                 agg_TEMP,
-                 cbind(SPE = agg_TEMP_112_agg[,c(1)], MOONcat = 12.5, agg_TEMP_112_agg[,c(5:7)], VAR = agg_TEMP_112_agg[,2], CI = agg_TEMP_112_agg[,9]))
-
 chart <- ggplot() +
   geom_vline(xintercept = c(9), linetype = "dashed", col = "blue1", alpha = 0.8, linewidth = 0.4)+
   
