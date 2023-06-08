@@ -1,7 +1,7 @@
 # Data and scripts associated with the moon wood-dendrometer study
 
 ### Title (provisional)
-**`Tree stem radius does not oscillate with the lunar cycle. Using growth monitoring to test the moon wood concept`**
+**`Examining the moon wood concept – Tree stem radius does not oscillate with the lunar cycle`**
 
 Jan Tumajer<sup>12</sup>, Sabine Braun<sup>3</sup>, Andreas Burger<sup>1</sup>, Tobias Scharnweber<sup>1</sup>, Marko Smiljanic<sup>1</sup>, Lorenz Walthert<sup>4</sup>, Roman Zweifel<sup>4</sup>, Martin Wilmking<sup>1</sup>
 1.	DendroGreif, Institute of Botany and Landscape Ecology, University of Greifswald, Soldmannstraße 15, 17489 Greifswald, Germany
