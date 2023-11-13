@@ -28,6 +28,10 @@ ALL$MOONcat <- cut(ALL$MOON, breaks = seq(0,2*pi, by = (2*pi)/12), labels = c(1:
 ALL.2 <- ALL[!(is.na(ALL$Temp)),]
 TEMP <- ALL.2[ALL.2$Temp > 0,] # Subsampling of timesteps with air temperature above 0 °C
 
+# Scaling of TWD for conifers
+ALL.2[ALL.2$Species %in% c("PCAB", "PISY"), "TWD"] <- ALL.2[ALL.2$Species %in% c("PCAB", "PISY"), "TWD"] * 0.2
+TEMP[TEMP$Species %in% c("PCAB", "PISY"), "TWD"] <- TEMP[TEMP$Species %in% c("PCAB", "PISY"), "TWD"] * 0.2
+
 #################
 ### Aggregate ###
 #################
@@ -55,10 +59,6 @@ colnames(GRO.agg_ALL) <- colnames(TWD.agg_ALL) <- colnames(GRO.agg_TEMP) <- coln
 
 agg_ALL <- rbind(cbind(GRO.agg_ALL, VAR = "Growth rate [μm/h]"), cbind(TWD.agg_ALL, VAR = "Tree water deficit [μm]")) 
 agg_TEMP <- rbind(cbind(GRO.agg_TEMP, VAR = "Growth rate [μm/h]"), cbind(TWD.agg_TEMP, VAR = "Tree water deficit [μm]")) 
-
-# Scaling of TWD for conifers
-agg_ALL[agg_ALL$SPE %in% c("PCAB", "PISY") & agg_ALL$VAR == "Tree water deficit [μm]", "MEANm"] <- agg_ALL[agg_ALL$SPE %in% c("PCAB", "PISY") & agg_ALL$VAR == "Tree water deficit [μm]", "MEANm"]/5 
-agg_TEMP[agg_TEMP$SPE %in% c("PCAB", "PISY") & agg_TEMP$VAR == "Tree water deficit [μm]", "MEANm"] <- agg_TEMP[agg_TEMP$SPE %in% c("PCAB", "PISY") & agg_TEMP$VAR == "Tree water deficit [μm]", "MEANm"]/5 
 
 # 95% confidence intervals
 agg_ALL$CI <- qt(0.975, agg_ALL$N)*agg_ALL$SDm/sqrt(agg_ALL$N)
